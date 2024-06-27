@@ -2,6 +2,7 @@
 import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import styles from './../../page.module.css'
 
 export default function About() {
     const [value, setValue] = React.useState(0);
@@ -11,7 +12,7 @@ export default function About() {
         setValue(newValue);
     };
     return (
-        <div>
+        <div className={styles.main}>
             <Tabs value={value} onChange={handleChange} aria-label="tabs example">
                 <Tab label="Login" />
                 <Tab label="Registration" />
